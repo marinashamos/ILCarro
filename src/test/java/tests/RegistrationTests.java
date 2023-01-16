@@ -15,13 +15,13 @@ public class RegistrationTests extends TestBase{
             app.getHelperUser().logout();
 
         }
-
     }
     @Test
     public void registrationSuccess(){
+
         Random random = new Random();
         int i = random.nextInt(1000);
-        User user = new User().withName("Lisa").withLastName("Simpson").withEmail("lisa"+i+"@mail.com").withPassword("Lisa12345$");
+        User user = new User().withName("Alex").withLastName("Shamos").withEmail("Alex"+i+"@mail.com").withPassword("Sham12345$");
 
         app.getHelperUser().openRegistrationForm();
         app.getHelperUser().fillRegistrationForm(user);
@@ -32,7 +32,7 @@ public class RegistrationTests extends TestBase{
     @Test
     public void registrationWrongEmail(){
 
-        User user = new User().withName("Lisa").withLastName("Simpson").withEmail("lisamail.com").withPassword("Lisa12345$");
+        User user = new User().withName("Alex").withLastName("Shamos").withEmail("Alexmail.com").withPassword("Sham12345$");
 
         app.getHelperUser().openRegistrationForm();
         app.getHelperUser().fillRegistrationForm(user);
@@ -43,7 +43,7 @@ public class RegistrationTests extends TestBase{
     @Test
     public void registrationWrongPassword(){
 
-        User user = new User().withName("Lisa").withLastName("Simpson").withEmail("lisa@mail.com").withPassword("Li");
+        User user = new User().withName("").withLastName("Shamos").withEmail("Alex@mail.com").withPassword("Sham");
 
         app.getHelperUser().openRegistrationForm();
         app.getHelperUser().fillRegistrationForm(user);

@@ -1,5 +1,6 @@
 package tests;
-
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import model.User;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -21,7 +22,7 @@ public class LoginTests extends TestBase {
         app.getHelperUser().fillLoginForm("dsa@gmail.com", "Qq123456$");
         app.getHelperUser().submit();
         Assert.assertEquals(app.getHelperUser().getMessage(), "Logged in success");
-        
+
 
     }
     @Test
