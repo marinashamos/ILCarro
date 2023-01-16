@@ -27,7 +27,7 @@ public class RegistrationTests extends TestBase{
         app.getHelperUser().fillRegistrationForm(user);
         app.getHelperUser().checkPolicy();
         app.getHelperUser().submit();
-        //Assert
+        //Assert.assertEquals(app.getHelperUser().getRegMessage(),"Registered");
     }
     @Test
     public void registrationWrongEmail(){
@@ -38,7 +38,9 @@ public class RegistrationTests extends TestBase{
         app.getHelperUser().fillRegistrationForm(user);
         app.getHelperUser().checkPolicy();
         app.getHelperUser().submit();
-        //Assert
+        Assert.assertTrue(app.getHelperUser().isYallaButtonNotActive());
+        Assert.assertEquals(app.getHelperUser().getErrorText(),"Wrong email format\n" +
+                "Wrong email format");
     }
     @Test
     public void registrationWrongPassword(){
@@ -49,6 +51,8 @@ public class RegistrationTests extends TestBase{
         app.getHelperUser().fillRegistrationForm(user);
         app.getHelperUser().checkPolicy();
         app.getHelperUser().submit();
-        //Assert
+        Assert.assertTrue(app.getHelperUser().isYallaButtonNotActive());
+        Assert.assertEquals(app.getHelperUser().getErrorText(),"Password must contain minimum 8 symbols\n" +
+                "Password must contain 1 uppercase letter, 1 lowercase letter, 1 number and one special symbol of [@$#^&*!]");
     }
 }
