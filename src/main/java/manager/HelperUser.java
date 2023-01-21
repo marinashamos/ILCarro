@@ -1,8 +1,10 @@
 package manager;
 
 import model.User;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
+
+import javax.swing.*;
 
 public class HelperUser extends HelperBase {
     public HelperUser(WebDriver wd) {
@@ -13,7 +15,7 @@ public class HelperUser extends HelperBase {
         click(By.xpath("//a[text()=' Log in ']"));
     }
 
-    public void fillLoginRegistrationForm(String email, String password) {
+    public void fillLoginForm(String email, String password) {
         type(By.id("email"), email);
         type(By.id("password"), password);
     }
@@ -23,11 +25,6 @@ public class HelperUser extends HelperBase {
         type(By.id("password"), user.getPassword());
     }
 
-    public void submit() {
-        click(By.xpath("//button[text()='Y’alla!']"));
-        // click(By.xpath("//button[@type='submit']"));
-
-    }
 
     public String getMessage() {
         return wd.findElement(By.cssSelector("div.dialog-container>h2")).getText();
@@ -40,8 +37,9 @@ public class HelperUser extends HelperBase {
     }
 
     public boolean isLogged() {
-        //return isElementPresent(By.xpath("//button[text()=' Logout ']"));
-        return isElementPresent(By.cssSelector("div.header a:nth-child(5)"));
+        return isElementPresent(By.xpath("//button[text()=' Logout ']"));
+        // return isElementPresent(By.cssSelector("div.header a:nth-child(5)"));
+
     }
 
     public void logout() {
@@ -50,6 +48,7 @@ public class HelperUser extends HelperBase {
     }
 
     public String getErrorText() {
+
         return wd.findElement(By.cssSelector("div.error")).getText();
     }
 
@@ -59,15 +58,8 @@ public class HelperUser extends HelperBase {
     }
 
     public void openRegistrationForm() {
+
         click(By.xpath("//a[text()=' Sign up ']"));
-    }
-
-    public void fillRegistrationForm(String name, String lastName, String email, String password) {
-        type(By.id("name"), name);
-        type(By.id("lastName"), lastName);
-        type(By.id("email"), email);
-        type(By.id("password"), password);
-
     }
 
     public void fillRegistrationForm(User user) {
@@ -78,9 +70,43 @@ public class HelperUser extends HelperBase {
     }
 
     public void checkPolicy() {
-        click(By.xpath("//div[@class='checkbox-container']"));
+        //click(By.id("terms-of-use"));
+        //click(By.cssSelector("label[for='terms-of-use']"));
+        if (!wd.findElement(By.id("terms-of-use")).isSelected()) {
+            click(By.cssSelector(".checkbox-container"));
+        }
+    }
+        public void checkPolicyXY () {
 
+            Dimension size = wd.manage().window().getSize();
+            System.out.println("Window Height " + size.getHeight());
+            System.out.println("Window Width " + size.getWidth());
+
+            WebElement label = wd.findElement(By.cssSelector("label[for='terms-of-use']"));
+
+            Rectangle rect = label.getRect();
+            int xOffset = rect.getWidth() / 2;
+
+            Actions actions = new Actions(wd);
+            actions.moveToElement(label, -xOffset, 0).click().release().perform();
+
+        }
+        public void checkPolicyJS () {
+            JavascriptExecutor js = (JavascriptExecutor) wd;
+            js.executeScript("document.querySelector('#terms-of-use').checked=true;");
+
+        }
+
+        public boolean isErrorMessageContains (String message){
+            return wd.findElement(By.cssSelector(".error")).getText().contains(message);
+        }
+
+        public void login (User user){
+            openFormLogin();
+            fillLoginForm(user);
+            submit();
+            closeDialogContainer();
+        }
     }
 
 
-}
