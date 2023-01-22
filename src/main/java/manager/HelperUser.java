@@ -12,6 +12,7 @@ public class HelperUser extends HelperBase {
     }
 
     public void openFormLogin() {
+
         click(By.xpath("//a[text()=' Log in ']"));
     }
 
@@ -24,8 +25,6 @@ public class HelperUser extends HelperBase {
         type(By.id("email"), user.getEmail());
         type(By.id("password"), user.getPassword());
     }
-
-
     public String getMessage() {
         return wd.findElement(By.cssSelector("div.dialog-container>h2")).getText();
     }
@@ -37,9 +36,9 @@ public class HelperUser extends HelperBase {
     }
 
     public boolean isLogged() {
-        return isElementPresent(By.xpath("//button[text()=' Logout ']"));
+        return isElementPresent(By.xpath("//a[text()=' Logout ']"));
         // return isElementPresent(By.cssSelector("div.header a:nth-child(5)"));
-
+        // a[normalize-space()='Logout'][1]
     }
 
     public void logout() {
@@ -63,50 +62,53 @@ public class HelperUser extends HelperBase {
     }
 
     public void fillRegistrationForm(User user) {
-        type(By.cssSelector("#name"), user.getName());
-        type(By.cssSelector("#lastName"), user.getLastName());
-        type(By.cssSelector("#email"), user.getEmail());
-        type(By.cssSelector("#password"), user.getPassword());
+        type(By.id("name"), user.getName());
+        type(By.id("lastName"), user.getLastName());
+        type(By.id("email"), user.getEmail());
+        type(By.id("password"), user.getPassword());
     }
 
     public void checkPolicy() {
         //click(By.id("terms-of-use"));
+        //click(By.cssSelector(".checkbox-container"));
         //click(By.cssSelector("label[for='terms-of-use']"));
         if (!wd.findElement(By.id("terms-of-use")).isSelected()) {
             click(By.cssSelector(".checkbox-container"));
         }
     }
-        public void checkPolicyXY () {
 
-            Dimension size = wd.manage().window().getSize();
-            System.out.println("Window Height " + size.getHeight());
-            System.out.println("Window Width " + size.getWidth());
+    public void checkPolicyXY() {
 
-            WebElement label = wd.findElement(By.cssSelector("label[for='terms-of-use']"));
+        Dimension size = wd.manage().window().getSize();
+        System.out.println("Window Height " + size.getHeight());
+        System.out.println("Window Width " + size.getWidth());
 
-            Rectangle rect = label.getRect();
-            int xOffset = rect.getWidth() / 2;
+        WebElement label = wd.findElement(By.cssSelector("label[for='terms-of-use']"));
 
-            Actions actions = new Actions(wd);
-            actions.moveToElement(label, -xOffset, 0).click().release().perform();
+        Rectangle rect = label.getRect();
+        int xOffset = rect.getWidth() / 2;
 
-        }
-        public void checkPolicyJS () {
-            JavascriptExecutor js = (JavascriptExecutor) wd;
-            js.executeScript("document.querySelector('#terms-of-use').checked=true;");
+        Actions actions = new Actions(wd);
+        actions.moveToElement(label, -xOffset, 0).click().release().perform();
 
-        }
-
-        public boolean isErrorMessageContains (String message){
-            return wd.findElement(By.cssSelector(".error")).getText().contains(message);
-        }
-
-        public void login (User user){
-            openFormLogin();
-            fillLoginForm(user);
-            submit();
-            closeDialogContainer();
-        }
     }
+
+    public void checkPolicyJS() {
+        JavascriptExecutor js = (JavascriptExecutor) wd;
+        js.executeScript("document.querySelector('#terms-of-use').checked=true;");
+
+    }
+
+    public boolean isErrorMessageContains(String message) {
+        return wd.findElement(By.cssSelector(".error")).getText().contains(message);
+    }
+
+    public void login(User user) {
+        openFormLogin();
+        fillLoginForm(user);
+        submit();
+        closeDialogContainer();
+    }
+}
 
 

@@ -11,7 +11,6 @@ public class AddNewCarTests extends TestBase{
     @BeforeMethod
     public void preCondition() {
         if(!app.getHelperUser().isLogged()){
-
             app.getHelperUser().login(new User().withEmail("dsa@gmail.com").withPassword("Qq123456$"));
         }
     }
@@ -37,10 +36,11 @@ public class AddNewCarTests extends TestBase{
 
             app.getHelperCar().openCarForm();
             app.getHelperCar().fillCarForm(car);
-            app.getHelperCar().attachPhoto("D:\\Projects");
+            app.getHelperCar().attachPhoto("D:\\Projects\\ILCarro\\corvett.jpeg");
             app.getHelperCar().submit();
-
             Assert.assertTrue(app.getHelperCar().isTitleMessageContains("Car added"));
+
+
         }
 
 

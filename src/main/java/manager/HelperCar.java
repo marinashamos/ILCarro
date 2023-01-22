@@ -12,6 +12,7 @@ public class HelperCar extends HelperBase {
 
     public void openCarForm() {
         //click(By.id("1"));
+        pause(500);
         click(By.xpath("//a[text()=' Let the car work ']"));
     }
 
@@ -32,10 +33,10 @@ public class HelperCar extends HelperBase {
 
     private void select(By locator, String option) {
         Select select = new Select(wd.findElement(locator));
-        select.selectByValue(option);// выбор по Value
+        select.selectByValue(option);// select Value
 
-        //select.deselectByVisibleText();// выбор по
-        //select.selectByIndex();// выбор по
+        //select.selectByVisibleText();// select Text
+        //select.selectByIndex();// select Index
 
     }
 
@@ -52,6 +53,7 @@ public class HelperCar extends HelperBase {
 
     }
     public void attachPhoto(String link) {
+
         wd.findElement(By.id("photos")).sendKeys(link);
     }
 }

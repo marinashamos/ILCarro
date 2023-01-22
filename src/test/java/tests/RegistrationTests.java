@@ -23,19 +23,20 @@ public class RegistrationTests extends TestBase {
 
         Random random = new Random();
         int i = random.nextInt(1000);
-        User user = new User().withName("Alex").withLastName("Shamos").withEmail("Alex" + i + "@mail.com").withPassword("Sham12345$");
+        User user = new User().withName("Alex").withLastName("Shamos").withEmail("alex"+i+"@mail.com").withPassword("Sham12345$");
 
         app.getHelperUser().openRegistrationForm();
         app.getHelperUser().fillRegistrationForm(user);
         app.getHelperUser().checkPolicy();
         app.getHelperUser().submit();
-        Assert.assertEquals(app.getHelperUser().getMessage(), "You are logged in success");
+        Assert.assertEquals(app.getHelperUser().getMessage(),"You are logged in success");
+
     }
 
     @Test
     public void registrationWrongEmail() {
 
-        User user = new User().withName("Alex").withLastName("Shamos").withEmail("Alexmail.com").withPassword("Sham12345$");
+        User user = new User().withName("Alex").withLastName("Shamos").withEmail("alexmail.com").withPassword("Sham12345$");
 
         app.getHelperUser().openRegistrationForm();
         app.getHelperUser().fillRegistrationForm(user);
@@ -48,7 +49,7 @@ public class RegistrationTests extends TestBase {
     @Test
     public void registrationWrongPassword() {
 
-        User user = new User().withName("Alex").withLastName("Shamos").withEmail("Alex@mail.com").withPassword("Sham");
+        User user = new User().withName("Alex").withLastName("Shamos").withEmail("alex@mail.com").withPassword("Sham");
 
         app.getHelperUser().openRegistrationForm();
         app.getHelperUser().fillRegistrationForm(user);

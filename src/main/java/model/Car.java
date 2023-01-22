@@ -8,7 +8,6 @@ import lombok.*;
 
 public class Car {
 
-
     private String location;
     private String manufacture;
     private String model;
