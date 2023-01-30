@@ -14,6 +14,7 @@ public class HelperUser extends HelperBase {
     public void openFormLogin() {
 
         click(By.xpath("//a[text()=' Log in ']"));
+        //click(By.xpath("//a[text()=' Lo ']"));
     }
 
     public void fillLoginForm(String email, String password) {
@@ -59,6 +60,7 @@ public class HelperUser extends HelperBase {
     public void openRegistrationForm() {
 
         click(By.xpath("//a[text()=' Sign up ']"));
+
     }
 
     public void fillRegistrationForm(User user) {

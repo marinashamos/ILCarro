@@ -1,0 +1,23 @@
+22:05:46.589  INFO  manager.ApplicationManager - All tests star in Chrome Browser
+22:05:49.076  INFO  manager.ApplicationManager - Current Url -->https://ilcarro.web.app/search
+22:05:49.101  INFO  tests.TestBase - The name of starts method is --->loginSuccess
+22:05:49.102  INFO  manager.ListenerWD - Before find elements --> By.xpath: //a[text()=' Logout ']
+22:05:54.143  INFO  manager.ListenerWD - After find elements --> By.xpath: //a[text()=' Logout ']
+22:05:54.146  INFO  manager.ListenerWD - List size is --> 0
+22:05:54.147  INFO  tests.TestBase - Login with valid data: email: dsa@gmail.com & password: Qq123456$
+22:05:54.148  INFO  manager.ListenerWD - Before find element --> By.xpath: //a[text()=' Log in ']
+22:05:54.172  INFO  manager.ListenerWD - After find element --> By.xpath: //a[text()=' Log in ']
+22:05:54.244  INFO  manager.ListenerWD - Before find element --> By.id: email
+22:05:54.268  INFO  manager.ListenerWD - After find element --> By.id: email
+22:05:54.398  INFO  manager.ListenerWD - Before find element --> By.id: password
+22:05:54.412  INFO  manager.ListenerWD - After find element --> By.id: password
+22:05:54.511  INFO  manager.ListenerWD - Before find element --> By.xpath: //button[@type='submit']
+22:05:54.526  INFO  manager.ListenerWD - After find element --> By.xpath: //button[@type='submit']
+22:05:54.573  INFO  manager.ListenerWD - Before find element --> By.cssSelector: div.dialog-container>h2
+22:05:55.524  INFO  manager.ListenerWD - After find element --> By.cssSelector: div.dialog-container>h2
+22:05:55.538  INFO  tests.TestBase - Tests success
+22:05:55.540  INFO  manager.ListenerWD - Before find elements --> By.xpath: //button[text()='Ok']
+22:05:55.557  INFO  manager.ListenerWD - After find elements --> By.xpath: //button[text()='Ok']
+22:05:55.557  INFO  manager.ListenerWD - List size is --> 1
+22:05:55.557  INFO  manager.ListenerWD - Before find element --> By.xpath: //button[text()='Ok']
+22:05:55.577  INFO  manager.ListenerWD - After find element --> By.xpath: //button[text()='Ok']

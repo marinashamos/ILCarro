@@ -1,0 +1,28 @@
+22:23:17.247  INFO  manager.ApplicationManager - All tests star in Chrome Browser
+22:23:19.686  INFO  manager.ApplicationManager - Current Url -->https://ilcarro.web.app/search
+22:23:19.711  INFO  tests.TestBase - The name of starts method is --->loginSuccess
+22:23:19.713  INFO  manager.ListenerWD - Before find elements --> By.xpath: //a[text()=' Logout ']
+22:23:24.742  INFO  manager.ListenerWD - After find elements --> By.xpath: //a[text()=' Logout ']
+22:23:24.744  INFO  manager.ListenerWD - List size is --> 0
+22:23:24.745  INFO  tests.TestBase - Login with valid data: email: dsa@gmail.com & password: Qq123456$
+22:23:24.746  INFO  manager.ListenerWD - Before find element --> By.xpath: //a[text()=' Lo ']
+22:23:29.771  INFO  manager.ListenerWD - We have a 'problem'
+22:23:29.771  INFO  manager.ListenerWD - *****
+22:23:29.772  INFO  manager.ListenerWD - Method method-->findElement
+22:23:29.772  INFO  manager.ListenerWD - *****
+22:23:29.773  INFO  manager.ListenerWD - InvocationTargetException getTargetException() org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()=' Lo ']"}
+  (Session info: chrome=109.0.5414.120)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.7.1', revision: 'c6795baf1a3'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e2fb4f96ea6de3da6c9dfcf4c0ae13de, findElement {using=xpath, value=//a[text()=' Lo ']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.120, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\Marina\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:63215}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63215/devtoo..., se:cdpVersion: 109.0.5414.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e2fb4f96ea6de3da6c9dfcf4c0ae13de
+22:23:29.774  INFO  manager.ListenerWD - *****
+22:23:29.774  INFO  manager.ListenerWD - Object targetChromeDriver: chrome on WINDOWS (e2fb4f96ea6de3da6c9dfcf4c0ae13de)
+22:23:29.774  INFO  manager.ListenerWD - *****
+22:23:29.777  INFO  manager.ListenerWD - Screen with error is --->src/test/screenshots/screen-151.png
+22:23:30.160  INFO  manager.ListenerWD - Before find elements --> By.xpath: //button[text()='Ok']
+22:23:35.207  INFO  manager.ListenerWD - After find elements --> By.xpath: //button[text()='Ok']
+22:23:35.207  INFO  manager.ListenerWD - List size is --> 0

@@ -1,0 +1,3 @@
+20:29:42.007  INFO  manager.ApplicationManager - All tests star in Chrome Browser
+20:29:44.328  INFO  manager.ApplicationManager - Current Url -->https://ilcarro.web.app/search
+20:29:44.353  INFO  tests.TestBase - The name of starts method is --->loginWrongPassword
