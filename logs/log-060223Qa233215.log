@@ -1,0 +1,72 @@
+23:32:16.943  INFO  manager.ApplicationManager - All tests star in Chrome Browser
+23:32:19.279  INFO  manager.ApplicationManager - Current Url -->https://ilcarro.web.app/search
+23:32:19.304  INFO  tests.TestBase - The name of starts method is --->loginSuccessModel
+23:32:19.305  INFO  manager.ListenerWD - Before find elements --> By.xpath: //a[text()=' Logout ']
+23:32:24.320  INFO  manager.ListenerWD - After find elements --> By.xpath: //a[text()=' Logout ']
+23:32:24.324  INFO  manager.ListenerWD - List size is --> 0
+23:32:24.335  INFO  tests.TestBase - Tests start with user model---User{name='null', lastName='null', email='dsa@gmail.com', password='Qq123456$'}
+23:32:24.336  INFO  manager.ListenerWD - Before find element --> By.xpath: //a[text()=' Log in ']
+23:32:24.358  INFO  manager.ListenerWD - After find element --> By.xpath: //a[text()=' Log in ']
+23:32:24.412  INFO  manager.ListenerWD - Before find element --> By.id: email
+23:32:24.429  INFO  manager.ListenerWD - After find element --> By.id: email
+23:32:24.545  INFO  manager.ListenerWD - Before find element --> By.id: password
+23:32:24.562  INFO  manager.ListenerWD - After find element --> By.id: password
+23:32:24.650  INFO  manager.ListenerWD - Before find element --> By.xpath: //button[@type='submit']
+23:32:24.667  INFO  manager.ListenerWD - After find element --> By.xpath: //button[@type='submit']
+23:32:24.698  INFO  tests.TestBase - Tests success
+23:32:24.700  INFO  manager.ListenerWD - Before find elements --> By.xpath: //button[text()='Ok']
+23:32:25.663  INFO  manager.ListenerWD - After find elements --> By.xpath: //button[text()='Ok']
+23:32:25.663  INFO  manager.ListenerWD - List size is --> 1
+23:32:25.663  INFO  manager.ListenerWD - Before find element --> By.xpath: //button[text()='Ok']
+23:32:25.681  INFO  manager.ListenerWD - After find element --> By.xpath: //button[text()='Ok']
+23:32:25.714  INFO  tests.TestBase - The name of starts method is --->loginSuccessModel
+23:32:25.714  INFO  manager.ListenerWD - Before find elements --> By.xpath: //a[text()=' Logout ']
+23:32:25.728  INFO  manager.ListenerWD - After find elements --> By.xpath: //a[text()=' Logout ']
+23:32:25.728  INFO  manager.ListenerWD - List size is --> 1
+23:32:25.728  INFO  manager.ListenerWD - Before find element --> By.cssSelector: div.header a:nth-child(5)
+23:32:25.744  INFO  manager.ListenerWD - After find element --> By.cssSelector: div.header a:nth-child(5)
+23:32:25.796  INFO  tests.TestBase - The test needs  logout scenario
+23:32:25.797  INFO  tests.TestBase - Tests start with user model---User{name='null', lastName='null', email='dsa@gmail.com', password='Qq123456$'}
+23:32:25.797  INFO  manager.ListenerWD - Before find element --> By.xpath: //a[text()=' Log in ']
+23:32:25.810  INFO  manager.ListenerWD - After find element --> By.xpath: //a[text()=' Log in ']
+23:32:25.848  INFO  manager.ListenerWD - Before find element --> By.id: email
+23:32:25.861  INFO  manager.ListenerWD - After find element --> By.id: email
+23:32:25.900  INFO  manager.ListenerWD - We have a 'problem'
+23:32:25.900  INFO  manager.ListenerWD - *****
+23:32:25.900  INFO  manager.ListenerWD - Method method-->click
+23:32:25.900  INFO  manager.ListenerWD - *****
+23:32:25.901  INFO  manager.ListenerWD - InvocationTargetException getTargetException() org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=109.0.5414.120)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: '4.7.1', revision: 'c6795baf1a3'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [738ed9a82b8c1a04e4370696f37741aa, clickElement {id=b02613d8-309c-48fc-aced-60bee5f5a42d}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.120, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\Marina\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51277}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51277/devtoo..., se:cdpVersion: 109.0.5414.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (738ed9a82b8c1a04e4370696f37741aa)] -> id: email]
+Session ID: 738ed9a82b8c1a04e4370696f37741aa
+23:32:25.901  INFO  manager.ListenerWD - *****
+23:32:25.901  INFO  manager.ListenerWD - Object target[[ChromeDriver: chrome on WINDOWS (738ed9a82b8c1a04e4370696f37741aa)] -> id: email]
+23:32:25.901  INFO  manager.ListenerWD - *****
+23:32:25.905  INFO  manager.ListenerWD - Before find elements --> By.xpath: //button[text()='Ok']
+23:32:30.942  INFO  manager.ListenerWD - After find elements --> By.xpath: //button[text()='Ok']
+23:32:30.943  INFO  manager.ListenerWD - List size is --> 0
+23:32:30.944  INFO  tests.TestBase - The name of starts method is --->loginSuccessModel
+23:32:30.945  INFO  manager.ListenerWD - Before find elements --> By.xpath: //a[text()=' Logout ']
+23:32:35.990  INFO  manager.ListenerWD - After find elements --> By.xpath: //a[text()=' Logout ']
+23:32:35.990  INFO  manager.ListenerWD - List size is --> 0
+23:32:35.991  INFO  tests.TestBase - Tests start with user model---User{name='null', lastName='null', email='alex@gmail.com', password='Sham12345$'}
+23:32:35.992  INFO  manager.ListenerWD - Before find element --> By.xpath: //a[text()=' Log in ']
+23:32:36.002  INFO  manager.ListenerWD - After find element --> By.xpath: //a[text()=' Log in ']
+23:32:36.050  INFO  manager.ListenerWD - Before find element --> By.id: email
+23:32:36.064  INFO  manager.ListenerWD - After find element --> By.id: email
+23:32:36.172  INFO  manager.ListenerWD - Before find element --> By.id: password
+23:32:36.183  INFO  manager.ListenerWD - After find element --> By.id: password
+23:32:36.259  INFO  manager.ListenerWD - Before find element --> By.xpath: //button[@type='submit']
+23:32:36.276  INFO  manager.ListenerWD - After find element --> By.xpath: //button[@type='submit']
+23:32:36.320  INFO  tests.TestBase - Tests success
+23:32:36.320  INFO  manager.ListenerWD - Before find elements --> By.xpath: //button[text()='Ok']
+23:32:36.592  INFO  manager.ListenerWD - After find elements --> By.xpath: //button[text()='Ok']
+23:32:36.592  INFO  manager.ListenerWD - List size is --> 1
+23:32:36.592  INFO  manager.ListenerWD - Before find element --> By.xpath: //button[text()='Ok']
+23:32:36.605  INFO  manager.ListenerWD - After find element --> By.xpath: //button[text()='Ok']

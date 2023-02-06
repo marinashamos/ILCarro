@@ -1,0 +1,24 @@
+23:25:48.592  INFO  manager.ApplicationManager - All tests star in Chrome Browser
+23:25:50.959  INFO  manager.ApplicationManager - Current Url -->https://ilcarro.web.app/search
+23:25:50.982  INFO  tests.TestBase - The name of starts method is --->loginUnregisterUser
+23:25:50.983  INFO  manager.ListenerWD - Before find elements --> By.xpath: //a[text()=' Logout ']
+23:25:56.008  INFO  manager.ListenerWD - After find elements --> By.xpath: //a[text()=' Logout ']
+23:25:56.011  INFO  manager.ListenerWD - List size is --> 0
+23:25:56.012  INFO  tests.TestBase - Login unregister user with valid data email:'mjmj@gmail.com' & password:'Tt12345$'
+23:25:56.012  INFO  manager.ListenerWD - Before find element --> By.xpath: //a[text()=' Log in ']
+23:25:56.036  INFO  manager.ListenerWD - After find element --> By.xpath: //a[text()=' Log in ']
+23:25:56.085  INFO  manager.ListenerWD - Before find element --> By.id: email
+23:25:56.101  INFO  manager.ListenerWD - After find element --> By.id: email
+23:25:56.209  INFO  manager.ListenerWD - Before find element --> By.id: password
+23:25:56.226  INFO  manager.ListenerWD - After find element --> By.id: password
+23:25:56.304  INFO  manager.ListenerWD - Before find element --> By.xpath: //button[@type='submit']
+23:25:56.319  INFO  manager.ListenerWD - After find element --> By.xpath: //button[@type='submit']
+23:25:56.349  INFO  manager.ListenerWD - Before find elements --> By.xpath: //a[text()=' Logout ']
+23:26:01.411  INFO  manager.ListenerWD - After find elements --> By.xpath: //a[text()=' Logout ']
+23:26:01.411  INFO  manager.ListenerWD - List size is --> 0
+23:26:01.416  INFO  tests.TestBase - Error message is: 'Login or Password incorrect'
+23:26:01.418  INFO  manager.ListenerWD - Before find elements --> By.xpath: //button[text()='Ok']
+23:26:01.437  INFO  manager.ListenerWD - After find elements --> By.xpath: //button[text()='Ok']
+23:26:01.437  INFO  manager.ListenerWD - List size is --> 1
+23:26:01.437  INFO  manager.ListenerWD - Before find element --> By.xpath: //button[text()='Ok']
+23:26:01.454  INFO  manager.ListenerWD - After find element --> By.xpath: //button[text()='Ok']

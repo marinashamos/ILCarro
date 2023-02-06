@@ -10,7 +10,7 @@ package tests;
         import java.lang.reflect.Method;
 
 public class TestBase {
-    ApplicationManager app =new ApplicationManager();
+    static ApplicationManager app =new ApplicationManager();
     Logger logger = LoggerFactory.getLogger(TestBase.class);
     @BeforeMethod
     public void  getNameMethod(Method m){
@@ -28,6 +28,6 @@ public class TestBase {
     @AfterSuite
     public void tearDown(){
 
-        //app.stop();
+        app.stop();
     }
 }
